@@ -1,0 +1,41 @@
+stages:
+  - build
+  - test
+
+variables:
+  ENV: "dev"
+
+before_script:
+  - pip install -r requirements.txt
+
+build:
+  stage: build
+  script:
+    - echo "Building the project..."
+
+health_check:
+  stage: test
+  script:
+    - export ENV=dev
+    - pytest tests/health_check
+  artifacts:
+    paths:
+      - tm4j_result.json
+
+contract:
+  stage: test
+  script:
+    - export ENV=dev
+    - pytest tests/contract
+  artifacts:
+    paths:
+      - tm4j_result.json
+
+functional:
+  stage: test
+  script:
+    - export ENV=dev
+    - pytest tests/functional
+  artifacts:
+    paths:
+      - tm4j_result.json
