@@ -1,0 +1,7 @@
+{
+    "projectKey": "YOUR_PROJECT_KEY",
+    "jiraUrl": "https://your-jira-instance.atlassian.net",
+    "username": "your-jira-username",
+    "password": "your-jira-api-token",
+    "jirasend": "LOCAL"
+}
