@@ -1,0 +1,20 @@
+api_automation/
+├── config/
+│   ├── dev_config.py
+│   ├── uat_config.py
+├── tests/
+│   ├── health_check/
+│   │   ├── test_health_check.py
+│   ├── contract/
+│   │   ├── test_contract.py
+│   ├── functional/
+│   │   ├── test_functional.py
+│   ├── conftest.py
+├── utils/
+│   ├── api_client.py
+│   ├── environment.py
+│   ├── result_logger.py
+├── .gitlab-ci.yml
+├── pytest.ini
+├── requirements.txt
+└── README.md
